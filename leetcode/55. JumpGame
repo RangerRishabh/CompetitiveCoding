@@ -1,0 +1,21 @@
+//link: https://leetcode.com/problems/jump-game/description/
+
+class Solution {
+    public boolean canJump(int[] nums) {
+        if(nums.length<=1)
+        return true;
+        int largeIndx = nums[0];
+        for(int i=0;i<nums.length;i++){
+            if(largeIndx<=i&&nums[i]==0){
+                return false;
+            }
+            if(i+nums[i]>largeIndx){
+                largeIndx = i + nums[i];
+            }
+            if(largeIndx>=nums.length-1)
+            return true;
+            
+        }
+        return false;
+    }
+}
