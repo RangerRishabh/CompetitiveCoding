@@ -1,3 +1,5 @@
+//link:https://leetcode.com/problems/detect-capital/description/
+
 class Solution {
     public boolean detectCapitalUse(String word) {
         boolean firstWord = false;
